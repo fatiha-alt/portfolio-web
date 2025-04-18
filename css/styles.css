@@ -12,30 +12,6 @@
     --section-padding: 80px 10%;
 }
 
-
-/*
-:root {
-    --primary-color: #469BA7;       
-    --secondary-color: #dbd0a8 ;    
-    --accent-color: #F1B393 ;       
-    --background-color: #005765;   
-    --text-color: #012731; 
-    --text2-color: #f1f3f9; 
-    --text3-color: #000000 ;       
-    --section-background: transparent; 
-    --footer-background: #dbd0a8;  
-    --font-family: 'Poppins', sans-serif;
-    --section-padding: 80px 10%;
-}
-
-    --primary-color: #005765;  Abyssal Waters - Pour les boutons et les liens 
-    --secondary-color: #012731;  Daintree - Pour les en-têtes et les pieds de page 
-    --background-color: #F1F3F9;  Boysenberry Shadow - Pour l'arrière-plan global 
-    --text-color: #012731;  Daintree - Pour le texte principal 
-    --accent-color: #F1B393;  Apricot Spring - Pour les effets de survol et les détails */
-
-
-
 html {
     scroll-behavior: smooth;
 }
