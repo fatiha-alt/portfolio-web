@@ -1,0 +1,346 @@
+:root {
+    --primary-color: #525B80;       
+    --secondary-color: #9E9DBD ;    
+    --accent-color: #C4ABC3 ;       
+    --background-color: #DF96A1;   
+    --text-color: #A3B1CF; 
+    --text2-color: #DCD7D5; 
+    --text3-color: #000000 ;      
+    --section-background: transparent; 
+    --bg-color: #3A2D34;   
+    --font-family: 'Poppins', sans-serif;
+    --section-padding: 80px 10%;
+}
+
+
+/*
+:root {
+    --primary-color: #469BA7;       
+    --secondary-color: #dbd0a8 ;    
+    --accent-color: #F1B393 ;       
+    --background-color: #005765;   
+    --text-color: #012731; 
+    --text2-color: #f1f3f9; 
+    --text3-color: #000000 ;       
+    --section-background: transparent; 
+    --footer-background: #dbd0a8;  
+    --font-family: 'Poppins', sans-serif;
+    --section-padding: 80px 10%;
+}
+
+    --primary-color: #005765;  Abyssal Waters - Pour les boutons et les liens 
+    --secondary-color: #012731;  Daintree - Pour les en-têtes et les pieds de page 
+    --background-color: #F1F3F9;  Boysenberry Shadow - Pour l'arrière-plan global 
+    --text-color: #012731;  Daintree - Pour le texte principal 
+    --accent-color: #F1B393;  Apricot Spring - Pour les effets de survol et les détails */
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh; /* Assure que le dégradé couvre toute la hauteur de la page */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-radius: 20px 20px 20px 20px; /* Coins arrondis en bas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 28px; /* Taille de police légèrement augmentée */
+    color: var(--text2-color);
+    text-decoration: none;
+    font-weight: 700; /* Police plus épaisse */
+    letter-spacing: 1px; /* Espacement des lettres */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--text2-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px; /* Espacement entre les liens */
+    padding: 8px 15px; /* Padding pour les liens */
+    border-radius: 25px; /* Coins arrondis pour les liens */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text3-color);
+    background-color: var(--accent-color); /* Changement de fond au survol */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombre portée au survol */
+    transform: translateY(-2px); /* Léger déplacement vers le haut */
+}
+
+/* Animation showRight */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding);
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text3-color);
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--section-background);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h2 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--background-color);
+}
+
+.home-content h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--section-background);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--section-background);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.4s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: var(--text2-color);
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--section-background);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.home-sci a:hover {
+    background: var(--background-color);
+    color: var(--bg-color);
+}
+
+.about {
+    padding: var(--section-padding);
+    background: var(--section-background);
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text2-color);
+}
+
+.projects {
+    padding: var(--section-padding);
+    background: var(--section-background);
+}
+
+.projects h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: var(--text2-color);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text3-color);
+}
+
+.project a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    padding: var(--section-padding);
+    background: var(--section-background);
+}
+
+.contact h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contact p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text3-color);
+}
+
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--text3-color);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
