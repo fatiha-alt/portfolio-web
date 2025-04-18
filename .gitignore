@@ -1,0 +1,21 @@
+# Node/npm
+node_modules/
+package-lock.json
+.npm
+
+# Build files
+dist/
+build/
+.cache
+
+# Environment
+.env
+.env.local
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
